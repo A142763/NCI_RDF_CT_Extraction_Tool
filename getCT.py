@@ -20,9 +20,9 @@ import zipfile
 
 def getStandard(standard: str) -> str:
     # The top level directory (location) where you want your OWL files
-    location = 'D:\\Data\\CT_OWL'
-    # location = 'D:\\Data\\test'
-    # CDASH doesn't have its own directory so it lives in the SDTM directory
+    # location = 'D:\\Data\\CT_OWL'
+    location = 'D:\\Data\\test'
+    # CDASH and SDTM are in the same source location
     if standard == 'CDASH':
         stdLoc = 'SDTM'
     else:
@@ -38,7 +38,7 @@ def getStandard(standard: str) -> str:
     http = urllib3.PoolManager()
     html_page = http.request('GET', 'https://evs.nci.nih.gov/ftp1/CDISC/' + stdLoc + '/Archive/')
     soup = BeautifulSoup(html_page.data.decode('utf-8'), 'html.parser')
-    for link in soup.findAll('a', attrs={'href': re.compile(stdLoc + ".*OWL.zip")}):
+    for link in soup.findAll('a', attrs={'href': re.compile(standard + ".*OWL.zip")}):
         dt = re.search("\\d{4}-\\d{2}-\\d{2}", link.get('href'))
         targetLocation = rootDir + dt.group()
         try:
