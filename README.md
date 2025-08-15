@@ -93,7 +93,7 @@ pip install beautifulsoup4 urllib3 certifi pycurl
 ## Author
 
 **Jimmy James**
-GitHub: \[your-GitHub-username]
+GitHub: A142763
 
 ---
 
