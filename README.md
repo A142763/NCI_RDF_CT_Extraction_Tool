@@ -89,13 +89,6 @@ GitHub: A142763
 
 ---
 
-### SEO Benefits Added:
-
-* Title and opening paragraph include **exact keyword** “CDISC Controlled Terminology RDF/OWL Downloader” and related search terms like “Python automation tool” and “CDISC RDF OWL download”.
-* Keywords such as **CDASH**, **SDTM**, **SEND**, **ADaM**, and **Define-XML** appear multiple times.
-* Structured headings for **Key Features**, **Usage**, **Requirements** so search engines can parse them easily.
-
----
 
 ## License
 
