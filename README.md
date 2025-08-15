@@ -1,7 +1,3 @@
-Here’s an SEO-optimized rewrite of your CDISC project README that targets phrases like **“CDISC Controlled Terminology Downloader”**, **“CDISC RDF OWL Download”**, and **“CDISC CT Python Script”** so it’s more discoverable on GitHub and Google.
-
----
-
 # CDISC Controlled Terminology (CT) RDF/OWL Downloader – Python Automation Tool
 
 The **CDISC Controlled Terminology RDF/OWL Downloader** is a Python automation tool that downloads and extracts official **CDISC Controlled Terminology** archives directly from the **NCI EVS (National Cancer Institute Enterprise Vocabulary Services)** FTP repository.
