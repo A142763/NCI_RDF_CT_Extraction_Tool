@@ -1,73 +1,67 @@
-# CDISC Controlled Terminology (CT) RDF/OWL Downloader
-
-This Python script automates the download and extraction of **CDISC Controlled Terminology** RDF/OWL archives from the official **NCI EVS (National Cancer Institute Enterprise Vocabulary Services)** FTP site.
-
-It organizes each downloaded version into a date-stamped directory for easy archival and retrieval.
+Here’s an SEO-optimized rewrite of your CDISC project README that targets phrases like **“CDISC Controlled Terminology Downloader”**, **“CDISC RDF OWL Download”**, and **“CDISC CT Python Script”** so it’s more discoverable on GitHub and Google.
 
 ---
 
-## Features
+# CDISC Controlled Terminology (CT) RDF/OWL Downloader – Python Automation Tool
 
-* Downloads OWL ZIP archives for:
+The **CDISC Controlled Terminology RDF/OWL Downloader** is a Python automation tool that downloads and extracts official **CDISC Controlled Terminology** archives directly from the **NCI EVS (National Cancer Institute Enterprise Vocabulary Services)** FTP repository.
 
-  * **CDASH** (Clinical Data Acquisition Standards Harmonization)
-  * **SDTM** (Study Data Tabulation Model)
-  * **SEND** (Standard for Exchange of Nonclinical Data)
-  * **ADaM** (Analysis Data Model)
-  * **Define-XML**
-* Creates a structured local directory by standard and release date
-* Automatically extracts downloaded ZIP archives and removes the original ZIP file
-* Can run for **one standard** or **all standards** in a single execution
+With a single command, you can fetch the latest **CDISC RDF/OWL files** for multiple standards, organize them into date-stamped folders, and keep a clean local archive for easy retrieval.
+
+---
+
+## Key Features
+
+* **Automatic Download** of OWL ZIP archives for:
+
+  * **CDASH** – Clinical Data Acquisition Standards Harmonization
+  * **SDTM** – Study Data Tabulation Model
+  * **SEND** – Standard for Exchange of Nonclinical Data
+  * **ADaM** – Analysis Data Model
+  * **Define-XML** – Define Standards for Submission
+* **Organized Output** – Saves each release into its own date-stamped directory by standard.
+* **Batch or Single Standard** – Download all standards in one go or target a specific one.
+* **ZIP Extraction** – Automatically unzips archives and removes the original ZIP.
 
 ---
 
 ## Requirements
 
-Python 3.x and the following Python packages:
+* **Python 3.x**
+* Required packages: `beautifulsoup4`, `urllib3`, `certifi`, `pycurl`
+  Install via:
 
-* `beautifulsoup4`
-* `urllib3`
-* `certifi`
-* `pycurl`
-
-You can install them via:
-
-```bash
-pip install beautifulsoup4 urllib3 certifi pycurl
-```
+  ```bash
+  pip install beautifulsoup4 urllib3 certifi pycurl
+  ```
 
 ---
 
-## Usage
+## Usage Instructions
 
-1. **Set your local download location**
-   Update the `location` variable inside the script to your desired path:
+1. **Set Download Path**
+   Update the `location` variable inside the script:
 
    ```python
    location = 'D:\\Data\\CT_OWL'
    ```
 
-2. **Run the script**
-   By default, the script is set to download **all standards**:
+2. **Choose Standards to Download**
 
-   ```python
-   std = 'ALL'
-   ```
+   * Default: Download **all** standards
 
-   To target a single standard, change the value to one of:
+     ```python
+     std = 'ALL'
+     ```
+   * Single standard options: `'CDASH', 'SDTM', 'SEND', 'ADaM', 'Define-XML'`
 
-   ```
-   'CDASH', 'SDTM', 'SEND', 'ADaM', 'Define-XML'
-   ```
-
-3. **Execute**:
+3. **Run the Script**
 
    ```bash
    python cdisc_ct_downloader.py
    ```
 
-4. **Result**:
-   The directory structure will look like:
+4. **Resulting Directory Structure**
 
    ```
    CT_OWL/
@@ -82,18 +76,24 @@ pip install beautifulsoup4 urllib3 certifi pycurl
 
 ---
 
-## Important Notes
+## Notes & Disclaimers
 
-* This script uses **web scraping** techniques to list available files. The archive structure could change in the future, breaking the script.
-* Ensure you have permission and abide by the [NCI EVS terms of use](https://evs.nci.nih.gov/).
-* This was originally written as a **personal learning project** in Python, so while functional, it’s not optimized for performance or error handling.
+* This script uses **web scraping** to list available files; changes in the NCI EVS site structure could require updates.
+* Always review and comply with the [NCI EVS Terms of Use](https://evs.nci.nih.gov/).
+* Originally built as a **Python learning project** — functional but not fully optimized for performance or error handling.
 
 ---
 
-## Author
-
-**Jimmy James**
+**Author:** Jimmy James
 GitHub: A142763
+
+---
+
+### SEO Benefits Added:
+
+* Title and opening paragraph include **exact keyword** “CDISC Controlled Terminology RDF/OWL Downloader” and related search terms like “Python automation tool” and “CDISC RDF OWL download”.
+* Keywords such as **CDASH**, **SDTM**, **SEND**, **ADaM**, and **Define-XML** appear multiple times.
+* Structured headings for **Key Features**, **Usage**, **Requirements** so search engines can parse them easily.
 
 ---
 
